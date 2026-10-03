@@ -34,7 +34,6 @@ export function Navbar() {
           </span>
         </Link>
 
-        {/* DESKTOP LINKS */}
         <div className="hidden lg:flex items-center gap-8">
           {NAV_LINKS.map((link, index) => (
             <Link
@@ -47,7 +46,6 @@ export function Navbar() {
           ))}
         </div>
 
-        {/* DESKTOP ACTIONS */}
         <div className="hidden lg:flex items-center gap-5">
           <Link
             href="/login"
@@ -57,14 +55,12 @@ export function Navbar() {
           </Link>
           <Link
             href="/signup"
-            className="bg-indigo-600 text-white hover:bg-indigo-700 rounded-full px-6 shadow-md shadow-indigo-600/20 transition-all hover:scale-105 group"
+            className="flex items-center justify-center h-10 bg-indigo-600 text-white hover:bg-indigo-700 rounded-full px-6 shadow-md shadow-indigo-600/20 transition-all hover:scale-105 group"
           >
             Essayer gratuitement
             <ArrowRight className="w-4 h-4 ml-1.5 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
-
-        {/* MOBILE MENU TOGGLE */}
         <button
           className="lg:hidden p-2 -mr-2 text-slate-600 hover:text-indigo-600 transition-colors focus:outline-none"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -78,7 +74,6 @@ export function Navbar() {
         </button>
       </div>
 
-      {/* MOBILE MENU DROPDOWN */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div

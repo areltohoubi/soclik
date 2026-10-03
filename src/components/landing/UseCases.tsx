@@ -61,7 +61,6 @@ export function UseCases() {
   return (
     <section id="use-cases" className="w-full py-24 bg-white">
       <div className="max-w-[1200px] mx-auto px-4 md:px-8">
-        {/* HEADER */}
         <div className="flex flex-col items-center text-center mb-16 max-w-2xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
@@ -76,9 +75,7 @@ export function UseCases() {
           </p>
         </div>
 
-        {/* TABS & CONTENT */}
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
-          {/* Left: Interactive Tabs */}
           <div className="w-full lg:w-1/2 space-y-4">
             {TARGETS.map((target) => {
               const isActive = activeTab.id === target.id;
@@ -118,7 +115,6 @@ export function UseCases() {
             })}
           </div>
 
-          {/* Right: Dynamic Visual */}
           <div className="w-full lg:w-1/2">
             <AnimatePresence mode="wait">
               <motion.div
@@ -139,7 +135,6 @@ export function UseCases() {
                   {activeTab.mockup}
                 </p>
 
-                {/* Decorative background circle */}
                 <div
                   className={`absolute -bottom-20 -right-20 w-64 h-64 rounded-full opacity-20 bg-current ${activeTab.color}`}
                 />

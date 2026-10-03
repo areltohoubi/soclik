@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Sparkles, Mail } from "lucide-react";
+import { Sparkles, Mail, BrainCircuit } from "lucide-react";
 
 // ============================================================================
 // FOOTER (Navigation, légal & réassurance)
@@ -9,14 +9,21 @@ import { Sparkles, Mail } from "lucide-react";
 
 // --- À personnaliser -------------------------------------------------------
 const BRAND = { name: "Soclik", suffix: "" }; // ex. { name: "Soclik", suffix: ".ai" }
-const CONTACT_EMAIL = "contact@soclik.com"; // ⚠️ remplacer par votre vraie adresse
+const CONTACT_EMAIL = "areltohoubi@gmail.com"; // ⚠️ remplacer par votre vraie adresse
 const TAGLINE =
   "Générez vos contenus pour les réseaux sociaux en quelques minutes, adaptés à chaque plateforme.";
 
-// Un réseau n'est affiché que si son URL est renseignée.
+// Signature : le nom devient un lien seulement si `href` est renseigné.
+const AUTHOR = { name: "Arel Tohoubi", href: "https://github.com/areltohoubi" };
+
+
 const SOCIALS = [
   { label: "X", href: "", icon: "x" },
-  { label: "LinkedIn", href: "", icon: "linkedin" },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/arel-tohoubi-934a122b6",
+    icon: "linkedin",
+  },
 ] as const;
 
 const FOOTER_LINKS = {
@@ -89,7 +96,10 @@ export function Footer() {
               aria-label={`${BRAND.name} — accueil`}
             >
               <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-indigo-600 shadow-sm">
-                <Sparkles className="h-4 w-4 text-white" aria-hidden="true" />
+                <BrainCircuit
+                  className="h-5 w-5 text-white"
+                  aria-hidden="true"
+                />
               </span>
               <span className="text-xl font-bold tracking-tight text-slate-900">
                 {BRAND.name}
@@ -158,10 +168,35 @@ export function Footer() {
 
         {/* BARRE DU BAS */}
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-slate-200 pt-8 md:flex-row">
-          <p className="text-sm text-slate-400">
-            © {currentYear} {BRAND.name}
-            {BRAND.suffix}. Tous droits réservés.
-          </p>
+          <div className="flex flex-col items-center gap-1 text-sm text-slate-400 sm:flex-row sm:gap-3">
+            <p>
+              © {currentYear} {BRAND.name}
+              {BRAND.suffix}. Tous droits réservés.
+            </p>
+            <span
+              className="hidden text-slate-300 sm:inline"
+              aria-hidden="true"
+            >
+              ·
+            </span>
+            <p>
+              Made by{" "}
+              {AUTHOR.href ? (
+                <a
+                  href={AUTHOR.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-slate-600 transition-colors hover:text-indigo-600"
+                >
+                  {AUTHOR.name}
+                </a>
+              ) : (
+                <span className="font-medium text-slate-600">
+                  {AUTHOR.name}
+                </span>
+              )}
+            </p>
+          </div>
 
           <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
             <li>

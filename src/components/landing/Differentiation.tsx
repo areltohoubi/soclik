@@ -38,7 +38,7 @@ export function Differentiation() {
       className="w-full py-24 bg-slate-50 overflow-hidden"
     >
       <div className="max-w-[1200px] mx-auto px-4 md:px-8">
-        {/* HEADER */}
+
         <div className="flex flex-col items-center text-center mb-16 max-w-3xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
@@ -61,9 +61,8 @@ export function Differentiation() {
           </motion.p>
         </div>
 
-        {/* COMPARISON CARDS */}
         <div className="relative flex flex-col md:flex-row gap-6 md:gap-0 max-w-5xl mx-auto items-center md:items-stretch">
-          {/* ChatGPT / Generalist AI Card */}
+        
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -91,12 +90,12 @@ export function Differentiation() {
             </ul>
           </motion.div>
 
-          {/* VS Badge (Desktop: absolute center, Mobile: hidden or static) */}
+          
           <div className="hidden md:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full border border-slate-200 shadow-sm items-center justify-center z-10 font-bold text-slate-400 text-sm">
             VS
           </div>
 
-          {/* SaaS / Specialized AI Card */}
+          
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}

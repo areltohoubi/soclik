@@ -33,7 +33,6 @@ export function PainPoints() {
   return (
     <section id="probleme" className="w-full py-24 bg-white">
       <div className="max-w-[1400px] mx-auto px-4 md:px-8">
-        {/* HEADER */}
         <div className="flex flex-col items-center text-center mb-16 max-w-3xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
@@ -50,7 +49,6 @@ export function PainPoints() {
           </motion.h2>
         </div>
 
-        {/* CARDS GRID */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-16">
           {PAIN_POINTS.map((point, index) => (
             <motion.div
@@ -74,7 +72,6 @@ export function PainPoints() {
           ))}
         </div>
 
-        {/* PSYCHOLOGICAL MESSAGE (EMPATHY) */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}

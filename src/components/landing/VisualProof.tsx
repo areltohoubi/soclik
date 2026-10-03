@@ -72,7 +72,7 @@ export function VisualProof() {
   return (
     <section id="preuve" className="w-full py-24 bg-white overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-4 md:px-8">
-        {/* HEADER */}
+        
         <div className="flex flex-col items-center text-center mb-12 max-w-2xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 10 }}
@@ -94,7 +94,7 @@ export function VisualProof() {
           </motion.p>
         </div>
 
-        {/* INTERACTIVE TABS */}
+        
         <div className="flex justify-center gap-3 mb-10">
           {EXAMPLES.map((example) => (
             <button
@@ -112,10 +112,9 @@ export function VisualProof() {
           ))}
         </div>
 
-        {/* COMPARISON CONTAINER */}
         <div className="relative flex flex-col md:flex-row items-stretch gap-6 md:gap-4 lg:gap-8 max-w-5xl mx-auto">
           <AnimatePresence mode="wait">
-            {/* LEFT: THE BRIEF (INPUT) */}
+          
             <motion.div
               key={`input-${activeTab.id}`}
               initial={{ opacity: 0, x: -20 }}
@@ -135,13 +134,12 @@ export function VisualProof() {
             </motion.div>
           </AnimatePresence>
 
-          {/* CENTER: ARROW / PROCESSING */}
+          
           <div className="hidden md:flex flex-col justify-center items-center relative z-10 px-2">
             <div className="w-12 h-12 bg-white rounded-full border border-slate-200 shadow-sm flex items-center justify-center">
               <ArrowRight className="w-5 h-5 text-indigo-600" />
             </div>
           </div>
-          {/* Mobile Arrow */}
           <div className="md:hidden flex justify-center -my-2 relative z-10">
             <div className="w-10 h-10 bg-white rounded-full border border-slate-200 shadow-sm flex items-center justify-center rotate-90">
               <ArrowRight className="w-4 h-4 text-indigo-600" />
@@ -149,7 +147,7 @@ export function VisualProof() {
           </div>
 
           <AnimatePresence mode="wait">
-            {/* RIGHT: THE RESULT (OUTPUT) */}
+            
             <motion.div
               key={`output-${activeTab.id}`}
               initial={{ opacity: 0, x: 20 }}
@@ -159,7 +157,7 @@ export function VisualProof() {
               className="flex-1"
             >
               <div className="bg-white border-2 border-indigo-50 rounded-2xl shadow-xl shadow-indigo-100/50 overflow-hidden flex flex-col h-full ring-1 ring-indigo-500/10">
-                {/* Fake Social Header */}
+           
                 <div className="border-b border-slate-100 px-4 py-3 flex items-center justify-between bg-slate-50/50">
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-full bg-slate-200 flex-shrink-0" />
@@ -177,12 +175,12 @@ export function VisualProof() {
                   </div>
                 </div>
 
-                {/* Output Content */}
+
                 <div className="p-6 flex-1 text-[15px] text-slate-800 whitespace-pre-line leading-relaxed">
                   {activeTab.output}
                 </div>
 
-                {/* Fake Social Actions */}
+  
                 <div className="px-6 py-4 border-t border-slate-100 flex gap-4 text-slate-400">
                   <Heart className="w-5 h-5 cursor-not-allowed" />
                   <MessageCircle className="w-5 h-5 cursor-not-allowed" />

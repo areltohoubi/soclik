@@ -48,8 +48,6 @@ export function HowItWorks() {
             Ne rédigez plus. Pilotez.
           </motion.p>
         </div>
-
-        {/* STEPS CONTAINER */}
         <div className="flex flex-col gap-20 md:gap-32">
           {/* STEP 1 */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
@@ -94,8 +92,6 @@ export function HowItWorks() {
               </div>
             </motion.div>
           </div>
-
-          {/* STEP 2 */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -107,7 +103,6 @@ export function HowItWorks() {
                 Sélectionnez le réseau cible
               </label>
               <div className="grid grid-cols-3 gap-4">
-                {/* Active Platform */}
                 <div className="flex flex-col items-center justify-center p-4 rounded-xl border-2 border-indigo-600 bg-indigo-50/50 cursor-pointer relative">
                   <div className="absolute -top-2 -right-2 w-5 h-5 bg-indigo-600 rounded-full flex items-center justify-center border-2 border-white">
                     <Check className="w-3 h-3 text-white" />
@@ -117,14 +112,14 @@ export function HowItWorks() {
                     LinkedIn
                   </span>
                 </div>
-                {/* Inactive Platform */}
+     
                 <div className="flex flex-col items-center justify-center p-4 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 cursor-pointer transition-colors">
                   <SocialIcon type="instagram" />
                   <span className="text-sm font-medium text-slate-500">
                     Instagram
                   </span>
                 </div>
-                {/* Inactive Platform */}
+     
                 <div className="flex flex-col items-center justify-center p-4 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 cursor-pointer transition-colors">
                   <SocialIcon
                     type="twitter"

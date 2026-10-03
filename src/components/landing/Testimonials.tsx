@@ -4,12 +4,6 @@ import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
 import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 
-// ============================================================================
-// SOCIAL PROOF SECTION (Témoignages / Slider)
-// ============================================================================
-
-// ⚠️ PLACEHOLDERS : à remplacer par de vrais retours utilisateurs avant le
-// lancement. Ne pas publier de faux témoignages.
 const TESTIMONIALS = [
   {
     id: 1,
@@ -72,7 +66,7 @@ export function Testimonials() {
     );
   }, []);
 
-  // Autoplay : s'arrête dès que l'utilisateur interagit
+  
   useEffect(() => {
     if (!isAutoplay) return;
     const timer = setInterval(() => paginate(1), AUTOPLAY_DELAY);
@@ -98,7 +92,6 @@ export function Testimonials() {
       className="w-full py-24 bg-slate-50 overflow-hidden"
     >
       <div className="max-w-[1200px] mx-auto px-4 md:px-8">
-        {/* HEADER */}
         <div className="flex flex-col items-center text-center mb-16 max-w-2xl mx-auto">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -119,7 +112,6 @@ export function Testimonials() {
           </motion.h2>
         </div>
 
-        {/* SLIDER */}
         <div className="relative max-w-4xl mx-auto">
           <div
             className="relative h-[350px] md:h-[280px] flex items-center justify-center"
@@ -142,7 +134,6 @@ export function Testimonials() {
                     aria-hidden="true"
                   />
 
-                  {/* Étoiles */}
                   <div
                     className="flex gap-1 mb-6"
                     role="img"
@@ -155,13 +146,10 @@ export function Testimonials() {
                       />
                     ))}
                   </div>
-
-                  {/* Citation */}
                   <blockquote className="text-lg md:text-2xl text-slate-700 font-medium leading-relaxed mb-8 relative z-10">
                     «&nbsp;{current.content}&nbsp;»
                   </blockquote>
 
-                  {/* Auteur */}
                   <figcaption className="flex items-center gap-4">
                     <div
                       className={`w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg ${current.avatar}`}
@@ -182,7 +170,6 @@ export function Testimonials() {
             </AnimatePresence>
           </div>
 
-          {/* Contrôles */}
           <div className="flex justify-center items-center gap-6 mt-8">
             <button
               type="button"
