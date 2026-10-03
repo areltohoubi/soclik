@@ -125,8 +125,7 @@ export default function DashboardPage() {
   const [loadError, setLoadError] = useState<string | null>(null);
 
   const displayName =
-    (user?.user_metadata?.full_name as string | undefined) ||
-    (user?.user_metadata?.name as string | undefined) ||
+    (user?.fullname) ||
     user?.email?.split("@")[0] ||
     "there";
 

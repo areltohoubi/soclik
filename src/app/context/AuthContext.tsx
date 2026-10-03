@@ -16,7 +16,8 @@ import { createBrowserClient } from "@supabase/ssr";
 export interface User {
   id: string;
   email: string;
-  name?: string;
+  fullname?: string;
+  avatar_url?: string[];
 }
 
 export interface BrandProfile {
@@ -86,7 +87,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       setUser({
         id: authUser.id,
         email: authUser.email || "",
-        name: authUser.user_metadata?.full_name || "",
+        fullname: authUser.user_metadata?.full_name || "",
+        avatar_url: authUser.user_metadata?.avatar_url || [],
       });
 
       // 2. Récupération du profil de marque associé

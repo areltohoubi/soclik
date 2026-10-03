@@ -31,7 +31,7 @@ export function Sidebar() {
       {/* Logo */}
       <div className="h-16 flex items-center px-6 border-b border-slate-100">
         <Link
-          href="/dashboard"
+          href="/"
           className="flex items-center gap-2 text-indigo-600"
         >
           <BrainCircuit className="w-6 h-6" />
